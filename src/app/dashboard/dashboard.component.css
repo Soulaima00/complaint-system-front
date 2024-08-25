@@ -1,0 +1,57 @@
+img {
+    margin-top: 140px;
+    width: 50%;
+    height: 50%;
+    margin-left: 70px;
+    position: relative;
+    bottom: 100px;
+    float: right;
+}
+/**************main********************/
+.main{
+    display: flex;
+    margin-top:47px;
+}
+.submit-follow{
+    margin-left: 150px;
+    text-align: center;
+    
+}
+.mrk{
+    color: #FFBD45;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+h1{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+p{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+button{
+    background-color: #0097da;
+    color: white;
+    border: #0097da;
+    width: 125px;
+    height: 35px;
+    border-radius: 3px;
+
+}
+.follow{
+    margin-top: 100px;
+}
+a{
+    color: white;
+    text-decoration: none;
+
+}
+a:hover{
+    text-decoration: none;
+
+    
+}

@@ -1,0 +1,67 @@
+.header{
+    background-color: #0097DA;
+    color: white;
+    padding: 2px;
+    margin-top: 70px;
+    width: 95%;
+    margin-left: 20px;
+}
+.title{
+    font-size: 13px;
+    margin-left: 10px;
+    font-weight:bolder;
+
+}
+.request-title{
+    color: #0097DA;
+    margin-left: 60px;
+}
+hr{
+    border: 1px solid rgb(222, 222, 222);
+    width: 95%;
+    position: relative;
+    bottom: 15px;
+}
+.alert{
+    margin-left: 30px;
+    width:1300px;
+    font-size: 20px;
+    
+
+}
+p{
+    margin-left: 3%;
+    font-size: 18px;
+}
+.check-box{
+    font-size: 120%;
+
+    color:rgb(10, 165, 10);
+
+}
+
+.btn2{
+    margin-left: 180px;
+    border-radius: 2px;
+    height : 30px;
+    width:130px;
+
+}
+.btn2-link:hover{
+    color: #0097DA;
+}
+.check{
+    font-weight: bolder;
+    font-size: 30px;
+}
+.claim{
+    margin-left: 35px;
+    padding: 5px;
+}
+.note{
+    
+    font-weight: lighter;
+    font-size: 15px;
+    color: red;
+    margin-bottom: 15px;
+}

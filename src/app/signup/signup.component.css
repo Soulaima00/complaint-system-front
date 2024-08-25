@@ -1,0 +1,58 @@
+
+
+#trait{
+    margin-left: 10%;
+    margin-top: 0.5%;
+    width: 70%;
+    font-size: 230%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color : #0097DA;
+}
+
+/* ********* form ********* */
+
+form{
+    margin-left: 20%;
+   
+}
+
+label , #gender{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 15px;
+}
+.gender{
+    display: flex;
+    flex-direction: row;
+}
+.gender-1, .gender-2{
+    margin-left: 175px;
+}
+input{
+    
+    background-color:rgba(233, 221, 221, 0.322);
+    border:1px solid rgba(223, 221, 221, 0.322);
+    padding: 10px 15px;
+    margin-top: 15px;
+}
+
+#birth{
+    padding-right: 22%;
+}
+
+button{
+    margin-left: 17%;
+    margin-top: 3%;
+    padding: 1% 13%;
+    background-color: #0097DA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+hr{
+    border: 1px solid rgb(222, 222, 222);
+    width: 85%;
+    position: relative;
+    bottom: 15px;
+    background-color:rgb(233, 221, 221) ;
+}

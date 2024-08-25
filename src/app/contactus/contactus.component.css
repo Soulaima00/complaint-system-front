@@ -1,0 +1,145 @@
+.fa{
+    font-size: 50px;
+}
+.jumbotron{
+text-align: center;
+height: 450px;
+background: url('../../assets/pic.jpg');
+background-size: 1450px;
+background-position-x: 40px;
+}
+.header{
+    font-weight: bolder;
+    color: #293277;
+    position: relative;
+    top: 60px;
+}
+.icons{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.phone{
+    text-align: center;
+}
+.icon-1{
+    background-color: #138df2;
+    width: 120px;
+    height: 120px;
+    color: white;
+    border-radius: 70px;
+    margin-left: 50px;
+}
+.icon1{
+    font-size: 50px;
+    position: relative;
+    top: 25px;
+}
+.desc{
+    font-weight: bold;
+    margin-top: 25px;
+    line-height: 35px;
+    font-size: 30px;
+}
+.desc2{
+    font-weight: lighter;
+    color: grey;
+    font-size: 20px;
+}
+
+
+
+/**************************************************************/
+.fax{
+    text-align: center;
+}
+.icon-2{
+    background-color: #138df2;
+    width: 120px;
+    height: 120px;
+    color: white;
+    border-radius: 70px;
+    margin-left: 20px;
+}
+.icon2{
+    font-size: 50px;
+    position: relative;
+    top: 25px;
+}
+.desc{
+    font-weight: bold;
+    margin-top: 25px;
+    line-height: 35px;
+    font-size: 30px;
+}
+.desc2{
+    font-weight: lighter;
+    color: grey;
+    font-size: 20px;
+}
+
+
+
+/**************************************************************/
+.local{
+    text-align: center;
+}
+.icon-3{
+    background-color: #138df2;
+    width: 120px;
+    height: 120px;
+    color: white;
+    border-radius: 70px;
+    margin-left: 75px;
+}
+.icon3{
+    font-size: 50px;
+    position: relative;
+    top: 25px;
+}
+.desc{
+    font-weight: bold;
+    margin-top: 25px;
+    line-height: 35px;
+    font-size: 30px;
+}
+.desc2{
+    font-weight: lighter;
+    color: grey;
+    font-size: 20px;
+}
+
+
+
+/**************************************************************/
+.adr{
+    text-align: center;
+}
+.icon-4{
+    background-color: #138df2;
+    width: 120px;
+    height: 120px;
+    color: white;
+    border-radius: 70px;
+    margin-left: 30px;
+}
+.icon1{
+    font-size: 50px;
+    position: relative;
+    top: 25px;
+}
+.desc{
+    font-weight: bold;
+    margin-top: 25px;
+    line-height: 35px;
+    font-size: 30px;
+}
+.desc2{
+    font-weight: lighter;
+    color: grey;
+    font-size: 20px;
+}
+
+
+
+/**************************************************************/
