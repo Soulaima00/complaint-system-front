@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2';
-import { AuthService } from '../Services/auth.service'; // Import the AuthService
+import { AuthService } from 'src/Services/auth.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class AppComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
   signupForm = this.fb.group({
     login: [null, [Validators.required]],
@@ -37,4 +36,6 @@ export class AppComponent implements OnInit {
       Swal.fire('Notification!', 'Veuillez remplir les champs obligatoire !', 'error');
     }
   }
-}
+
+}import Swal from 'sweetalert2';
+

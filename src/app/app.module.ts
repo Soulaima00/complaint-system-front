@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TreatComponent } from './treat/treat.component';
 import {NgSelectModule} from "@ng-select/ng-select";
 import { NavbarComponent } from './navbar/navbar.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     VerificationComponent,
     TableComponentComponent,
     TreatComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent
 ],
   imports: [
     BrowserModule,

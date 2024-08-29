@@ -177,23 +177,31 @@ li a {
 
 /* Form element styling */
 .login {
-  width: 55%;
+  width: 50%;
   display: flex;
   align-items: center; /* Vertically center the form */
   justify-content: center; /* Horizontally center the form */
   padding: 20px;
   box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
+
 .log-tit{
   text-align: center;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
+  font-size: 44px;
+  line-height: 56px;
+  color: #263238;
 }
+
+
 .login form {
-  width: 50%;
+  width: 57%;
   display: flex;
   flex-direction: column;
+  margin-top: 35px;
   gap: 15px;
+  
 }
 
 .login .form-group {
@@ -246,14 +254,14 @@ input{
 .form-control:focus{
   background-color: transparent;
   border: none !important;
-  border-bottom: 1px solid red !important;
+  border-bottom: 1px solid #90caf9 !important;
   outline: 2px saddlebrown !important;
   box-shadow: none !important;
 }
 
 .logo-container {
   position: absolute;
-  top: 50px;
+  top: 30px;
   left: 50px;
 }
 
@@ -267,7 +275,7 @@ input{
   display: flex;
   padding: 20px;
   box-sizing: border-box; /* Ensure padding doesn't affect width */
-  background-color:#ebebeb
+  background-color:#445491
 }
 
 .img img {
