@@ -1,0 +1,125 @@
+body{
+  margin-bottom: 35px;
+}
+.header{
+  background-color: #0097DA;
+  color: white;
+  padding: 2px;
+  margin-top: 30px;
+  width: 95%;
+  margin-left: 20px;
+}
+.title{
+  font-size: 13px;
+  margin-left: 10px;
+  font-weight:bolder;
+
+}
+.claim-title{
+  color: #0097DA;
+  margin-left: 60px;
+
+}
+hr{
+  border: 1px solid rgb(222, 222, 222);
+  width: 93%;
+  position: relative;
+  bottom: 15px;
+}
+.inputs{
+  margin-left: 87px;
+  margin-top: -20px;
+}
+.inputs2{
+  margin-left: 72px;
+
+}
+.special{
+  color: red;
+}
+.input-title{
+  color: grey;
+  font-size: 14px;
+  margin-left: 65px;
+  margin-bottom: 40px;
+  margin-top: -26px;
+
+}
+.input-file{
+  color:grey;
+  margin-left: 239px;
+  line-height: 17px;
+}
+input{
+  display: block;
+  border: none;
+  background-color: rgba(223, 221, 221, 0.322) ;
+  width: 250px;
+  height: 50px;
+  border-radius: 2px;
+}
+textarea{
+  border: none;
+  background-color: rgba(223, 221, 221, 0.322);
+  width: 250px;
+  height: 150px;
+  border-radius: 2px;
+}
+.claim{
+  margin-top: 10px;
+  margin-left: 25px;
+}
+input[type=file]{
+  background-color: transparent;
+  height: 30px;
+
+}
+.input-file{
+  font-size: 13px;
+}
+.btn1{
+  margin-top: 10px;
+  margin-left: 15px;
+  background-color: #23A618;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  height : 30px;
+  width:99px;
+}
+.btn2{
+  margin-left: 370px;
+  border-radius: 2px;
+  height : 30px;
+  width:99px;
+}
+.link1{
+  transition: color 0.25s;
+  text-decoration: none;
+  color: black;
+}
+.link2{
+  transition: color 0.25s;
+  text-decoration: none;
+  color: white;
+}
+.link2:hover{
+  text-decoration: none;
+
+}
+.link1:hover{
+  color: #23A618;
+}
+.title2{
+  margin-bottom: 30px;
+}
+.code{
+  margin-bottom: 30px;
+}
+.subtitle{
+  margin-bottom: 30px;
+}
+
+
+
+

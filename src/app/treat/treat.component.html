@@ -1,0 +1,143 @@
+
+<div class="container-fluid">
+  <div class="row page-title align-items-center">
+    <div class="col-sm-4 col-xl-6">
+      <h4 class="mb-1 mt-0">Liste des Reclamations</h4>
+    </div>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="card-body">
+      <div>
+        <h5 class="card-title header-title mt-0 mb-0">Liste des reclamations</h5>
+
+
+      </div>
+      <div class="table-responsive mt-4">
+
+        <table  datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+          <thead>
+          <tr>
+            <th scope="col" class="width-xl">#</th>
+            <th scope="col" class="width-xl" >Description</th>
+            <th scope="col" class="width-xl" >Type</th>
+            <th scope="col" class="width-xl" >Sous Type</th>
+            <th scope="col" class="width-xl" >User</th>
+            <th scope="col" class="width-xl" >Date</th>
+            <th scope="col" class="width-xl" >Situation</th>
+            <th scope="col">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr  *ngFor="let c of reclamations " >
+
+            <td  >{{ c.id }}</td>
+
+            <td  >{{ c.message }}</td>
+            <td  >{{ c.sousTypeReclamation.typeReclamation.libFr }}</td>
+            <td  >{{ c.sousTypeReclamation.libFr }}</td>
+            <td  >{{ c.createdBy }}</td>
+            <td  >{{ c.createdDate }}</td>
+            <td  class="dropdown action-label">
+              <a *ngIf="c.situation == 0">
+                <i class="fa fa-dot-circle-o text-danger" ></i> En cours </a>
+              <a  *ngIf="c.situation == 1" >
+                <i class="fa fa-dot-circle-o text-success" ></i> Cloturé </a>
+            </td>
+
+            <td  >
+              <button class="btn bg-info btn-wd btn-icon" type="button"  *ngIf="c.situation == 0"  (click)="openModalEdit(DetailsModal, c)">
+                <div class="d-flex align-items-center">
+                  <i class="material-icons me-2" aria-hidden="true">edit</i>
+
+                  Traiter
+                </div>
+              </button>
+
+            </td>
+
+          </tr>
+
+          </tbody>
+
+        </table>
+
+
+      </div><!-- end table -->
+    </div><!-- end card-body -->
+  </div><!-- end card -->
+
+</div>
+
+<ng-template #DetailsModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title">Traitement Reclamation</h5>
+    <button type="button" class="close"  (click)="modal.dismiss('Cross click')" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body" *ngIf="displayData">
+    <div>
+      <strong>ID:</strong>
+      <p>{{ reclamation.id }}</p>
+    </div>
+
+
+
+    <div>
+      <strong>Description:</strong>
+      <p>{{ reclamation.message }}</p>
+    </div>
+
+    <div>
+      <strong>Date:</strong>
+      <p>{{ reclamation.createdDate }}</p>
+    </div>
+    <div>
+      <strong>Type:</strong>
+      <p>{{ reclamation.sousTypeReclamation.typeReclamation.libFr }}</p>
+    </div>
+    <div>
+      <strong>Sous Type:</strong>
+      <p>{{ reclamation.sousTypeReclamation.libFr }}</p>
+    </div>
+
+    <div>
+      <strong>Situation:</strong>
+      <a *ngIf="reclamation.situation == 0">
+        <i class="fa fa-dot-circle-o text-danger" ></i> En cours </a>
+      <a  *ngIf="reclamation.situation == 1" >
+        <i class="fa fa-dot-circle-o text-success" ></i> Cloturé </a>
+    </div>
+    <div  class="img-thumbnail ">
+      <img  *ngIf="reclamation.image !== null" alt="" [src]="sanitizer.bypassSecurityTrustUrl('data:image/jpg;base64,'+ reclamation.image  )" width="150" height="150">
+    </div>
+
+    <form (ngSubmit)="confirmSave()" [formGroup]="addClaimForm">
+
+
+      <div class="form-group row">
+        <label  for="desc" class="col-sm-2 col-form-label">Observation <span class="special">*</span></label>
+        <div class="col-sm-10">
+          <textarea   formControlName="observation"  name="area-1" id="desc"></textarea>
+        </div>
+      </div>
+
+
+
+    </form>
+    <button class="btn bg-success btn-wd btn-icon" type="button"    (click)="confirmSave()">
+      <div class="d-flex align-items-center">
+        <i class="material-icons me-2" aria-hidden="true">save</i>
+
+        Sauvgarder
+      </div>
+    </button>
+
+
+  </div>
+
+</ng-template>

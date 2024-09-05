@@ -1,0 +1,39 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { ClaimComponent } from './claim/claim.component';
+import { ContactComponent } from './contact/contact.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { FollowComponent } from './follow/follow.component';
+import { SignupComponent } from './signup/signup.component';
+import { VerificationComponent } from './verification/verification.component';
+import { AboutComponent } from './about/about.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { AuthguardGuard } from './shared/authguard.guard';
+import { ServiceService } from './shared/service.service';
+import { TreatComponent } from './treat/treat.component';
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { PasswordResetComponent } from './password-reset/password-reset.component';
+import { ReclamationStatistiquesComponent } from './reclamation-statistiques/reclamation-statistiques.component';
+
+const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, 
+  { path: 'charts', component: ReclamationStatistiquesComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'claim', component: ClaimComponent, canActivate: [AuthguardGuard] },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthguardGuard] },
+  { path: 'follow', component: FollowComponent, canActivate: [AuthguardGuard] },
+  { path: 'signup', component: SignupComponent },
+  { path: 'verification', component: VerificationComponent, canActivate: [AuthguardGuard] },
+  { path: 'reset', component: PasswordResetComponent},
+  { path: 'about', component: AboutComponent, canActivate: [AuthguardGuard] },
+  { path: 'contactus', component: ContactusComponent, canActivate: [AuthguardGuard] },
+  { path: 'treat', component: TreatComponent, canActivate: [AuthguardGuard] },
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+  providers: [ServiceService]
+})
+export class AppRoutingModule { }
