@@ -1,0 +1,92 @@
+nav div{
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  nav {
+    background-color: #ffffff; /* Start with a white background */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensure logo and links are aligned horizontally */
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Styling for the logo */
+  .navbar-brand img {
+    max-width: 100px; /* Medium size for the logo */
+    transition: max-width 0.3s ease;
+  }
+  .items{
+    float: right;
+  }
+  /* Styling for the navigation items */
+  .items ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between the links */
+    align-items: center; /* Align links vertically within the nav */
+  }
+  
+  .items ul li {
+    display: inline-block;
+  }
+  
+  .items ul li a {
+    text-decoration: none;
+    color: #000000; /* Default color for links */
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Navbar fixed position and background color on scroll */
+  nav.scrolled {
+    background-color: #007BFF; /* Blue background on scroll */
+  }
+  
+  nav.scrolled .items ul li a {
+    color: #ffffff; /* White links on scroll */
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-brand {
+      margin-bottom: 10px;
+    }
+  
+    .items ul {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .items ul li {
+      width: 100%;
+      text-align: left;
+    }
+  
+    .items ul li a {
+      display: block;
+      width: 100%;
+    }
+  
+    .navbar-brand img {
+      max-width: 80px; /* Adjust logo size for smaller screens */
+    }
+  }
+  .items ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light hover effect */
+    border-radius: 4px;
+  }

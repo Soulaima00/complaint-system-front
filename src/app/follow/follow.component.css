@@ -1,0 +1,19 @@
+.title{
+    margin-top:15px !important;
+    font-size: 25px;
+}
+.btn{
+    width: 110px;
+    height: 35px;
+    font-size: 18px;
+}
+.input-group{
+display: block;
+}
+input{
+    width: 100% !important;
+    margin-top: 15px;
+}
+th{
+    background-color: #afb0b1;
+}
