@@ -46,6 +46,10 @@ export class ReclamationService {
       .get<IReclamation[]>(this.reclamationUrl, {  observe: 'response' })
       .pipe();
   }
+  allReclamationByUser(id :any ): Observable<any> {
+    return this.http.get<any[]>(`${this.reclamationUrl}/creator/${id}`);
+
+  }
   allTypeReclamation(): Observable<EntityArrayResponseType> {
     return this.http
       .get<any[]>(this.typeReclamationUrl, {  observe: 'response' })

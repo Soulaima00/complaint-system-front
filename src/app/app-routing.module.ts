@@ -18,7 +18,7 @@ import { ReclamationStatistiquesComponent } from './reclamation-statistiques/rec
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }, 
-  { path: 'charts', component: ReclamationStatistiquesComponent },
+  { path: 'charts', component: ReclamationStatistiquesComponent , canActivate: [AuthguardGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'claim', component: ClaimComponent, canActivate: [AuthguardGuard] },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthguardGuard] },

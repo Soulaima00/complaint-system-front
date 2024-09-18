@@ -16,7 +16,7 @@ export class AuthguardGuard implements CanActivate {
     const isAdmin = localStorage.getItem('isAdmin');
     
     if (logged === '1') {
-      if (state.url === '/treat') {
+      if (state.url === '/treat'|| state.url=='/charts') {
         if (isAdmin === 'true') {
           return true;
         } else {

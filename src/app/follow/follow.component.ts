@@ -16,6 +16,7 @@ import {DomSanitizer} from "@angular/platform-browser";
 })
 
 export class FollowComponent implements OnInit{
+  idCreator: any;
 
   reclamations: any[] | any;
   dtOptions: any = {};
@@ -23,13 +24,22 @@ export class FollowComponent implements OnInit{
   displayData: boolean = false;
   reclamation: any;
   constructor(public sanitizer: DomSanitizer ,private modalService: NgbModal , private router: Router, protected http: HttpClient, private reclamationService: ReclamationService) {
+    this.idCreator = localStorage.getItem('vi2');
+
   }
   ngOnInit(): void {
-this.reclamationService.allReclamation().subscribe(x=>{
-    this.reclamations= x.body;
-  this.dtTrigger.next();
+// this.reclamationService.allReclamation().subscribe(x=>{
+//     this.reclamations= x.body;
+//   this.dtTrigger.next();
 
-}) ;
+// }*) ;
+ this.reclamationService.allReclamationByUser(this.idCreator).subscribe(x=>{
+      this.reclamations= x;}
+      
+      
+      );
+      console.log( this.reclamations);
+
     this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength: 5,
