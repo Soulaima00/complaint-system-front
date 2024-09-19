@@ -40,6 +40,5 @@ export class PasswordResetComponent {
         },
     );
     this.ngOnInit()  ;
-
   }
 }

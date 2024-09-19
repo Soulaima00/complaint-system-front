@@ -7,19 +7,13 @@
         </div>
         <div class="items">
             <ul>
-                <li>
-                    <a routerLink="/dashboard">Dashboard</a>
+                <li *ngFor="let link of links">
+                  <a *ngIf="!isAdmin"  [routerLink]="link.route">{{ link.name }}</a>
                 </li>
                 <li>
-                    <a routerLink="/about">About Us</a>
+                  <a (click)="logout()">Logout</a>
                 </li>
-                <li>
-                    <a routerLink="/contactus">Contact Us</a>
-                </li>
-                <li >
-                    <a routerLink="/">Logout</a>
-                </li>
-            </ul>
+              </ul>
         </div>
     </div>
 </nav>

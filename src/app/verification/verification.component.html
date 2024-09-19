@@ -1,31 +1,29 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <div class="header">
-        <h5 class="title">
-            Dashboard / Submit A Claim
-        </h5>
+<div class="header">
+  <h5 class="title">Dashboard / Submit A Claim</h5>
+</div>
+<div class="request">
+  <h3 class="request-title">Your request</h3>
+  <hr />
+  <div class="alert alert-success" role="alert">
+    <div>
+      <h4 class="complaint">
+        <span class="check">✓</span> Your complaint has been registered.
+      </h4>
     </div>
-    <div class="request">
-        <h3 class="request-title">
-            Your request
-        </h3>
-        <hr>
-        <div class="alert alert-success" role="alert">
-            <div>
-                <h4 class="complaint"><span class="check" >✓</span> Your complaint has been registered. </h4>
-            </div>
-        </div>
-        <div class="claim">
-            <h4 class="details">Your claim number is: {{codeClaim}}<h5></h5> <br>
-                A confirmation email with this number has been sent to you at:<h5></h5><br>
-            <span class="note"> keep this number as it will be used to track the progress of the claim.</span></h4>
-        </div>
-    </div>
-    <button routerLink="/dashboard" class="btn2 "><a >back to home</a></button>
-</body>
-</html>
+  </div>
+  <div class="claim">
+    <h4 class="details">
+      Your claim number is: {{ codeClaim }}
+      <h5></h5>
+      <br />
+      A confirmation email with this number has been sent to you at:
+      <h5></h5>
+      <br />
+      <span class="note">
+        keep this number as it will be used to track the progress of the
+        claim.</span
+      >
+    </h4>
+  </div>
+</div>
+<button routerLink="/dashboard" class="btn2"><a>back to home</a></button>

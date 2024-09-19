@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
@@ -10,31 +10,18 @@ import { AuthService } from '../Services/auth.service'; // Import the AuthServic
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-
+  isLoggedIn: any;
   signupForm = this.fb.group({
     login: [null, [Validators.required]],
     password: [null, [Validators.required]],
   });
-  
-  public isLoggedIn: boolean = false;
-  
-  constructor(private fb: FormBuilder, private router: Router, private authService: AuthService) {}  // Inject AuthService
-  
-  ngOnInit(): void {}
-
-  login() {
-    const { login, password } = this.signupForm.value;
-
-    if (login && password) {
-      // Use the AuthService to authenticate the user
-      if (this.authService.authenticate(login, password)) {
-        this.isLoggedIn = true;
-        this.router.navigate(['/dashboard']);  // Navigate based on the user credentials
-      } else {
-        Swal.fire('Notification!', 'Email ou mot de passe incorrect !', 'error');
+  constructor(private fb: FormBuilder,private authService : AuthService, private cdr: ChangeDetectorRef) {}  // Inject AuthService
+  ngOnInit() {
+    this.authService.isLoggedIn$.subscribe(
+      (status: boolean) => {
+        this.isLoggedIn = status;
+        this.cdr.detectChanges(); // Ensure Angular detects changes
+        console.log('Login status in AppComponent:', status); // For debugging
       }
-    } else {
-      Swal.fire('Notification!', 'Veuillez remplir les champs obligatoire !', 'error');
-    }
-  }
+    );  }
 }

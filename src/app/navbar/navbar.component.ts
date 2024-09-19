@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AuthService } from 'src/Services/auth.service';
+import { NavbarService } from 'src/Services/navbar.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  links: { name: string; route: string }[] = [];
+  isAdmin : boolean = false;
+  constructor(private authService: AuthService, private navbarService: NavbarService) { }
 
-  constructor() { }
+  
+  ngOnInit() {
+    this.navbarService.links$.subscribe(links => {
+      this.links = links;
+    });
 
-  ngOnInit(): void {
+    this.isAdmin = this.authService.getIsAdmin();
+    console.log('Is Admin:', this.isAdmin);
   }
 
+
+  logout() {
+    this.authService.logout();
+  }
 }

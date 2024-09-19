@@ -1,27 +1,28 @@
 nav div{
     display: flex;
     justify-content: space-between;
-  
   }
+
   nav {
     background-color: #ffffff; /* Start with a white background */
-    position: fixed;
+    
     top: 0;
     width: 100%;
-    z-index: 1000;
+    
     display: flex;
     justify-content: space-between;
     align-items: center; /* Ensure logo and links are aligned horizontally */
     padding: 10px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 25px;
   }
   
-  /* Styling for the logo */
   .navbar-brand img {
     max-width: 100px; /* Medium size for the logo */
     transition: max-width 0.3s ease;
   }
+
   .items{
     float: right;
   }
