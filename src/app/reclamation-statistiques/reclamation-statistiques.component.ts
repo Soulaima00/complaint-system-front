@@ -16,6 +16,7 @@ export class ReclamationStatistiquesComponent implements OnInit {
   pieChartLabels: any[]=[];
   pieChartData: any[]=[];
   pieChart: any;
+  activePage: string="charts";
 
   constructor(private reclamationStatistiqueService: ReclamationStatistiqueService) { }
 

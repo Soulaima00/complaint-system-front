@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VerificationComponent implements OnInit {
   codeClaim: number = 1501;
+  activePage: string="verification";
 
   constructor() { }
 

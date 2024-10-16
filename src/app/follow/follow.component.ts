@@ -17,6 +17,7 @@ import {DomSanitizer} from "@angular/platform-browser";
 
 export class FollowComponent implements OnInit{
   idCreator: any;
+  activePage: string="follow";
 
   reclamations: any[] | any;
   dtOptions: any = {};

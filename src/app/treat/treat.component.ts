@@ -20,6 +20,7 @@ export class TreatComponent implements OnInit {
   displayData: boolean = false;
   reclamation: any;
   public addClaimForm!: FormGroup;
+  activePage: string="treat";
 
   constructor(private formBuilder: FormBuilder, public sanitizer: DomSanitizer ,private modalService: NgbModal , private router: Router, protected http: HttpClient, private reclamationService: ReclamationService) {
   }

@@ -4,20 +4,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./dashboard.component.css">
 </head>
+  
+<style>
+    .navbar {
+      justify-content: center;
+    }
+    .navbar-nav {
+      text-align: center;
+    }
+    .navbar-nav .nav-item {
+      display: inline-block;
+    }
+    .nav-link.active {
+      font-weight: bold;
+      border-bottom: 2px solid #007bff;
+    }
+  </style>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'active': activePage === 'dashboard'}" routerLink="/dashboard">Accueil</a>
+          </li> <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'active': activePage === 'claim'}" routerLink="/claim">Réclamation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'active': activePage === 'follow'}" routerLink="/follow">Suivi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'active': activePage === 'verification'}" routerLink="/verification">Vérification</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'active': activePage === 'contactus'}" routerLink="/contactus">Contact</a>
+          </li>
+  
+          <!-- Options communes -->
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'active': activePage === 'about'}" routerLink="/about">À propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'active': activePage === 'reset'}" routerLink="/login">Déconnexion</a>
+          </li>
+    </ul>
+  </div>
+  </nav>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
 <body>
+  
 <div class="main">
     <div class="submit-follow">
         <div class="submit">
             <h1 class="title-1"><span class="mrk">Submit</span> a claim</h1>
             <p class="para-1">To submit a new claim,<br>
                 click on the button below.</p>
-            <button><a routerLink="/claim">Submit</a></button>
+            <button><a style="color: white;" routerLink="/claim">Submit</a></button>
         </div>
         <div class="follow">
             <h1 class="title-1"><span class="mrk">follow</span> a claim</h1>
             <p class="para-1">To submit a new claim,<br>
             click on the button below.</p>
-            <button><a routerLink="/follow">Follow</a></button>
+            <button><a  style="color: white;" routerLink="/follow">Follow</a></button>
         </div>
     </div>
     <img class="img" src="../../assets/5112782.jpg" alt="computer" id="img" >

@@ -15,6 +15,7 @@ export class ClaimComponent implements OnInit {
   public stypes : any;
   public reclamation!: IReclamation;
   get f() { return this.addClaimForm.controls; }
+  activePage: string="claim";
 
   constructor(private formBuilder: FormBuilder, private reclamationService: ReclamationService) { }
 

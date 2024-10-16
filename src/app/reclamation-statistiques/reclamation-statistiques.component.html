@@ -1,4 +1,48 @@
 <!-- chart-container.component.html -->
+
+
+<style>
+  .navbar {
+    justify-content: center;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-nav .nav-item {
+    display: inline-block;
+  }
+  .nav-link.active {
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+  }
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" [ngClass]="{'active': activePage === 'charts'}" routerLink="/charts">Statistiques</a>
+    </li>
+   
+    <li class="nav-item">
+      <a class="nav-link" [ngClass]="{'active': activePage === 'treat'}" routerLink="/treat">Traitement</a>
+    </li>
+
+        <!-- Options communes -->
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{'active': activePage === 'about'}" routerLink="/about">À propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{'active': activePage === 'reset'}" routerLink="/login">Déconnexion</a>
+        </li>
+  </ul>
+</div>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <div class="chart-container">
     <div class="chart-item">
       <canvas id="barChart"></canvas>

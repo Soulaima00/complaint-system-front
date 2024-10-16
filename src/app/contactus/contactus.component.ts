@@ -11,6 +11,7 @@ export class ContactusComponent implements OnInit {
   loca = faLocationArrow
   mail = faEnvelope
   constructor() { }
+  activePage: string="contactus";
 
   ngOnInit(): void {
   }
